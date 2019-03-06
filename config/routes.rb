@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+   root 'pages#index'
+   get 'comments/new'
    get 'topics/new'
    get 'sessions/new'
-   root 'pages#index'
    get 'pages/help'
 
    resources :users
@@ -16,4 +17,5 @@ Rails.application.routes.draw do
 
    resources :users
    resources :topics
+   resources :comments
 end
